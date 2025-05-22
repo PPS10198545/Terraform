@@ -43,7 +43,7 @@ RA5.2/
 * Se generó una **Access Key** y **Secret Key** que se usaron en `terraform.tfvars`.
 
 **Captura:** *"IAM con política EC2 asignada"*
-![IAM con política EC2 asignada](capturas/000ec2.png)
+![IAM con política EC2 asignada](capturas/000-ec2.png)
 
 
 ### 2. Generación de clave SSH
