@@ -1,0 +1,24 @@
+- name: Configurar servidor web Ubuntu
+  hosts: webservers
+  become: yes
+  tasks:
+    - name: Actualizar el sistema
+      apt:
+        update_cache: yes
+        upgrade: dist
+
+    - name: Instalar Apache
+      apt:
+        name: apache2
+        state: present
+
+    - name: Crear index.html
+      copy:
+        dest: /var/www/html/index.html
+        content: "Ansible rocks"
+
+    - name: Reiniciar Apache
+      service:
+        name: apache2
+        state: restarted
+
